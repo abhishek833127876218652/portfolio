@@ -1,0 +1,187 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #4a4a4a;
+    margin: 0%;
+    padding: 0%;
+}
+h1, h3 {
+    font-family: 'Poppins', sans-serif;
+    gap: 20px;
+}
+/* h1:hover{
+    color: blue;
+    font-size: 46px;
+    transition: font-size 1s ease-out;
+} */
+
+:root {
+    --bg-color: #1e1e1e; /* Dark background */
+    --primary-color: #f0a500; /* Accent color */
+    --text-color: #ffffff;
+}
+.link {
+    color: var(--primary-color);
+   
+}
+header {
+    background: linear-gradient(135deg, #333, #111);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 1rem;
+}
+.link {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 20px;
+}
+
+.link:hover {
+    background-color: var(--primary-color);
+    color: #1e1e1e;
+}
+.link:active{
+    background: #dcdcdc;
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+p {
+    line-height: 1.6;
+    overflow-wrap: break-word;
+
+}
+@media (max-width: 768px) {
+    .head h1 {
+        font-size: 1.5rem;
+    }
+    .head h3 {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.img{
+   height: 500PX;
+   width: 50%;
+   /* background-color: transparent; */
+    margin-left: 59%;
+    /* background: #960808; */
+    position: absolute;
+    overflow: hidden; 
+    z-index: -1;  
+}
+
+.bio{
+    margin-left: 4%;
+    margin-top: 4%;
+    width: 70%;
+}
+.main{
+    height: 400px;
+    width: 100%;
+}
+.about{
+    height: 250px ;
+    width: 100%;
+    margin-top: 100px;
+    color: #000000;
+ 
+}
+.about h2 ,p{
+    text-align: center;
+}
+.platform{
+    text-align: center;
+ font-size: 40px;
+ border-radius: 10%; 
+gap: 30px;
+
+}
+/* Add smooth transitions to elements */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Header animations */
+header {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Link hover effects */
+.link:hover {
+    transform: scale(1.1); /* Slightly enlarge the link */
+    background-color: var(--primary-color);
+    color: #1e1e1e;
+}
+
+/* Heading animations on hover
+h1:hover {
+    color: blue;
+    font-size: 46px;
+    transition: font-size 1s ease-out, color 0.5s ease;
+} */
+
+/* Image animations */
+.img img {
+    animation: slideIn 1.5s ease-out;
+    transform: scale(1); /* Ensures the image starts normally */
+}
+
+.img img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* About section animations */
+.about {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.platform {
+    animation: bounce 2s infinite;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
